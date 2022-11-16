@@ -1,5 +1,5 @@
 import React from "react";
-import { useEmbedRef } from '@thoughtspot/visual-embed-sdk/react';
+import { Liveboard, useEmbedRef } from '@thoughtspot/visual-embed-sdk/react';
 import { EmbedEvent, Action, HostEvent } from '@thoughtspot/visual-embed-sdk';
 import "./liveboard.css";
 import '../config'
