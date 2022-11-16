@@ -8,7 +8,7 @@
     "@emotion/core": "11.0.0",
     "@emotion/react": "11.4.0",
     "@emotion/styled": "11.3.0",
-    "@thoughtspot/visual-embed-sdk": "^1.15.0",
+    "@thoughtspot/visual-embed-sdk": "^1.16.0",
     "deps": "^1.0.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",

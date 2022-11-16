@@ -1,16 +1,11 @@
 import React from "react";
-import { SearchEmbed, useEmbedRef } from "@thoughtspot/visual-embed-sdk/lib/src/react"
-import { EmbedEvent, Action, HostEvent } from "@thoughtspot/visual-embed-sdk";
-import '../config'
+import { SearchEmbed, useEmbedRef } from '@thoughtspot/visual-embed-sdk/react'
+import { EmbedEvent, Action, HostEvent } from '@thoughtspot/visual-embed-sdk';
+import "../config";
 import { gbl_disabledActionSet, gbl_disabledMessage } from "../config";
 
-
-
 const Search = () => {
-
   const embedRef = useEmbedRef();
-
-
 
   return (
     <div>
