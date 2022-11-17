@@ -18,7 +18,7 @@ const Navbar = () => {
         <Bars />
         <NavMenu>
         <ThoughtSpotLogo style={{marginLeft: + '-45'}} />
-          <NavLink to="/liveboard">
+          <NavLink to="/preview">
             LIVEBOARD
           </NavLink>
           <NavLink to="/search" >
