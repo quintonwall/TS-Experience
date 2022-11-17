@@ -24,7 +24,7 @@ const Navbar = () => {
           <NavLink to="/search" >
             SEARCH
           </NavLink>
-          <NavLink to={{pathname: "https://codesandbox.io/s/keen-einstein-1g9vrl"}} target="_blank" >
+          <NavLink to={{pathname: "https://codesandbox.io/p/github/quintonwall/TS-Experience/main"}} target="_blank" >
             DEVELOP
           </NavLink>
         </NavMenu>

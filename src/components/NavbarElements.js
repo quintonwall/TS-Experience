@@ -91,7 +91,7 @@ export const NavBtnLink = styled(Link)`
 export const ThoughtSpotLogo = styled.div`
 padding: 15px 80px;
 text-align: left;
-background-image: url("./T-Logo.png");
+background-image: url("/T-Logo.png");
 background-size: 24px 24px;
 background-repeat: no-repeat;
 background-position: center;
