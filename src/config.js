@@ -40,7 +40,6 @@ export const gbl_disabledActionSet =  [
         Action.Share,
         Action.ShareViz,
         Action.SpotIQAnalyze,
-        Action.ShowUnderlyingData,
         "sync-to-sheets",
         "sync-to-other-apps",
         "manage-pipeline",
