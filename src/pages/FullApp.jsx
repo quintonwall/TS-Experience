@@ -9,7 +9,7 @@ import { gbl_disabledActionSet, gbl_disabledMessage } from "../config";
 
 export const defaultActionSet = [Action.DrillDown, Action.AddFilter, Action.ShowUnderlyingData, Action.ConfigureFilter];
 
-const Liveboard = () => {
+const FullApp = () => {
   
   const embedRef = useEmbedRef();
 
@@ -40,4 +40,4 @@ const Liveboard = () => {
   );
 };
 
-export default Liveboard;
+export default FullApp;

@@ -8,6 +8,7 @@ import "./config";
 import Home from "./pages/Home";
 import Liveboard from "./pages/Liveboard";
 import Search from "./pages/Search";
+import EmptySearch from "./pages/EmptySearch";
 import FullApp from "./pages/FullApp";
 import FreeTrial from "./pages/FreeTrial";
 import { FaAccessibleIcon } from "react-icons/fa";
@@ -48,6 +49,7 @@ function App() {
         <Route path="/" exact component={Home} />
         <Route path="/liveboard" component={Liveboard} />
         <Route path="/search" component={Search} />
+        <Route path="/emptysearch" component={EmptySearch} />
         <Route path="/fullapp" component={FullApp} />
         <Route path="/freetrial" component={FreeTrial} />
       </Switch>
