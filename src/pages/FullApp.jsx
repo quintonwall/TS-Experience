@@ -1,5 +1,5 @@
 import React from "react";
-import { LiveboardEmbed, useEmbedRef } from '@thoughtspot/visual-embed-sdk/lib/src/react';
+import { AppEmbed, useEmbedRef } from '@thoughtspot/visual-embed-sdk/lib/src/react';
 import { EmbedEvent, Action, HostEvent } from '@thoughtspot/visual-embed-sdk';
 import "./liveboard.css";
 import '../config'
@@ -28,16 +28,13 @@ const Liveboard = () => {
 
   return (
     <div >
-      <LiveboardEmbed
+      <AppEmbed
             ref={embedRef}
             frameParams={{
               height: 1200
             }}
-            fullHeight={fullHeight}
-            liveboardId="b173faa2-e861-4540-a232-853f7aeb2c37"
-            onLoad={onLoad}
-            disabledActions={gbl_disabledActionSet}
-            disabledActionReason={gbl_disabledMessage}
+            fullHeight="true"
+            pageId="Page.Home"
         />
     </div>
   );
