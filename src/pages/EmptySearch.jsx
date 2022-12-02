@@ -15,7 +15,7 @@ function testa(){
 
 const init_pendo = (e) => {
   console.log("Initializing Pendo");
-  embedRef.contentWindow.pendo.initialize();
+  //embedRef.contentWindow.pendo.initialize();
 };
 
 const EmptySearch = () => {
