@@ -48,9 +48,9 @@ function App() {
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/liveboard" component={Liveboard} />
-        <Route path="/search" component={Search} />
+        <Route path="/searchdirect" component={Search} />
         <Route path="/emptysearch" component={EmptySearch} />
-        <Route path="/fullapp" component={FullApp} />
+        <Route path="/search" component={FullApp} />
         <Route path="/freetrial" component={FreeTrial} />
       </Switch>
     </Router>
