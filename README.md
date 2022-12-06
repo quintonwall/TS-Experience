@@ -11,5 +11,8 @@ redirect to /liveboard
 # configuration
 config.js
 
+## hosting
+Hosted on s3
 
-
+## rewrites
+rewrite from /preview to s3 url.
