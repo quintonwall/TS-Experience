@@ -3,7 +3,7 @@ import { SearchEmbed, useEmbedRef } from '@thoughtspot/visual-embed-sdk/lib/src/
 import { EmbedEvent, Action, HostEvent } from '@thoughtspot/visual-embed-sdk';
 import "../config";
 import { gbl_disabledActionSet, gbl_disabledMessage } from "../config";
-const embedRef = useEmbedRef();
+
 
 function testa(){
   //embedRef.contentWindow.getElementsByName('ThoughtSpot Embedded Analytics')[0].contentWindow.pendo.initialize();
@@ -20,7 +20,7 @@ const init_pendo = (e) => {
 
 const EmptySearch = () => {
   
-
+  const embedRef = useEmbedRef();
   return (
     <div>
       <SearchEmbed
