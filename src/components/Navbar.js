@@ -18,10 +18,10 @@ const Navbar = () => {
         <Bars />
         <NavMenu>
         <ThoughtSpotLogo style={{marginLeft: + '-45'}} />
-          <NavLink to="/liveboard">
+          <NavLink to="/liveboardtour">
             LIVEBOARD
           </NavLink>
-          <NavLink to="/search" >
+          <NavLink to="/searchtour" >
             SEARCH
           </NavLink>
           <NavLink to={{pathname: "https://codesandbox.io/p/github/quintonwall/TS-Experience/main"}} target="_blank" >

@@ -47,10 +47,10 @@ function App() {
       <Navbar />
       <Switch>
         <Route path="/" exact component={Home} />
-        <Route path="/liveboard" component={Liveboard} />
+        <Route path="/liveboardtour" component={Liveboard} />
         <Route path="/searchdirect" component={Search} />
         <Route path="/emptysearch" component={EmptySearch} />
-        <Route path="/search" component={FullApp} />
+        <Route path="/searchtour" component={FullApp} />
         <Route path="/freetrial" component={FreeTrial} />
       </Switch>
     </Router>
