@@ -1,6 +1,9 @@
 import { FaBars } from "react-icons/fa";
 import { NavLink as Link } from "react-router-dom";
 import styled from "@emotion/styled";
+import App from "../App";
+
+
 
 export const Nav = styled.nav`
 
@@ -93,7 +96,7 @@ export const FreeTrialBtnBlue = styled(Link)`
   background-color: #4E55FD;
   color: #ffffff;
   padding: 6px 15px;
-  font-family: "BBRollerRegular";
+  font-family: "OptimoPlainRegular";
   font-weight: 400;
   font-size: 12px;
   outline: none;

@@ -17,6 +17,7 @@ import { useInitThoughtSpot } from "./use-init-thoughtspot";
 import { useEffect } from "react/cjs/react.production.min";
 import { Redirect } from "react-router";
 
+
 //use https://transfonter.org/ to convert fonts
 const GlobalStyles = css`
   @font-face {
@@ -25,7 +26,7 @@ const GlobalStyles = css`
   }
 
   @font-face {
-    font-family: "OptimoPlain-Regular";
+    font-family: "OptimoPlainRegular";
     src: url("./fonts/Plain-Regular.ttf") format("truetype");
   }
 
@@ -48,7 +49,7 @@ function App() {
       <Navbar />
       <Switch>
         <Redirect from="/" to="preview/liveboard" />
-        
+
         <Route path="/" exact component={Home} />
         <Route path="/preview/liveboard" component={Liveboard} />
         <Route path="/preview/search" component={FullApp} />
