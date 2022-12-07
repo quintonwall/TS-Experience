@@ -15,6 +15,7 @@ import { FaAccessibleIcon } from "react-icons/fa";
 import { gbl_thoughtSpotHost } from "./config";
 import { useInitThoughtSpot } from "./use-init-thoughtspot";
 import { useEffect } from "react/cjs/react.production.min";
+import { Redirect } from "react-router";
 
 //use https://transfonter.org/ to convert fonts
 const GlobalStyles = css`
@@ -46,12 +47,12 @@ function App() {
       <Global styles={GlobalStyles} />
       <Navbar />
       <Switch>
+        <Redirect from="/" to="preview/liveboard" />
+        
         <Route path="/" exact component={Home} />
-        <Route path="/liveboardtour" component={Liveboard} />
-        <Route path="/searchdirect" component={Search} />
-        <Route path="/emptysearch" component={EmptySearch} />
-        <Route path="/searchtour" component={FullApp} />
-        <Route path="/freetrial" component={FreeTrial} />
+        <Route path="/preview/liveboard" component={Liveboard} />
+        <Route path="/preview/search" component={FullApp} />
+        <Route path="/preview/freetrial" component={FreeTrial} />
       </Switch>
     </Router>
   );

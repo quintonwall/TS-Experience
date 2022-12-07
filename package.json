@@ -23,7 +23,7 @@
   },
   "scripts": {
     "start": "PORT=8000  react-scripts start",
-    "build": "PORT=8000 PUBLIC_URL=/liveboard react-scripts build",
+    "build": "PORT=8000 react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
