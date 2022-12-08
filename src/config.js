@@ -48,3 +48,16 @@ export const gbl_disabledActionSet =  [
         Action.ToggleSize,
         Action.UpdateTML 
       ];
+
+
+      export const gbl_meta = {
+        title: "ThoughtSpot Product Tour",
+        description: "Experience the power of live analytics with a interactive demo of ThoughtSpot.",
+        canonical: "https://thoughtspot.com/preview",
+        meta: {
+            charset: "utf-8",
+            name: {
+                keywords: "thoughtspot,quinton,embedded analytics, demo, live analytics, preview"
+            }
+        }
+      }
