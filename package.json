@@ -15,7 +15,8 @@
     "react-icons": "4.2.0",
     "react-router": "5.2.0",
     "react-router-dom": "5.2.0",
-    "react-scripts": "^4.0.3"
+    "react-scripts": "^4.0.0",
+    "react-helmet": "^6.1.0" 
   },
   "devDependencies": {
     "@babel/runtime": "7.13.8",
@@ -23,7 +24,8 @@
   },
   "scripts": {
     "start": "PORT=8000  react-scripts start",
-    "build": "PORT=8000 PUBLIC_URL=https://s3.us-west-1.amazonaws.com/tsalivepreview.thoughtspot.com/ react-scripts build",
+    "build_for_s3": "PORT=8000 PUBLIC_URL=https://s3.us-west-1.amazonaws.com/tsalivepreview.thoughtspot.com/ react-scripts build",
+    "build": "PORT=8000 react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },

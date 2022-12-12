@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import { Global, css } from "@emotion/react";
+import {Helmet} from "react-helmet";
 import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./config";
@@ -12,9 +13,11 @@ import EmptySearch from "./pages/EmptySearch";
 import FullApp from "./pages/FullApp";
 import FreeTrial from "./pages/FreeTrial";
 import { FaAccessibleIcon } from "react-icons/fa";
-import { gbl_thoughtSpotHost } from "./config";
+import { gbl_metatitle, gbl_thoughtSpotHost } from "./config";
 import { useInitThoughtSpot } from "./use-init-thoughtspot";
 import { useEffect } from "react/cjs/react.production.min";
+import { Redirect } from "react-router";
+
 
 //use https://transfonter.org/ to convert fonts
 const GlobalStyles = css`
@@ -24,7 +27,7 @@ const GlobalStyles = css`
   }
 
   @font-face {
-    font-family: "OptimoPlain-Regular";
+    font-family: "OptimoPlainRegular";
     src: url("./fonts/plain-regular.ttf") format("truetype");
   }
 
@@ -33,25 +36,33 @@ const GlobalStyles = css`
   }
 `;
 
-// try-everywhere provides unauthenticated aceess. You can not use this for production.
+// try-everywhere provides unauthenticated access. You can not use this for production.
 // Please refer to <docs link> for auth options.
 
 function App() {
+
+  
   const isInit = useInitThoughtSpot(gbl_thoughtSpotHost);
   if (!isInit) {
     return <>Loading...</>;
   }
   return (
+    
+
     <Router>
+      <Helmet>
+                <title>ThoughtSpot Product Tour</title>
+                <meta name="description" content="{gbl_meta.description}" />
+                <meta name="keywords" content="{gbl_meta.meta.name.keywords}" />
+    </Helmet>
       <Global styles={GlobalStyles} />
       <Navbar />
       <Switch>
+        <Redirect from="/" to="preview/liveboard" />
         <Route path="/" exact component={Liveboard} />
-        <Route path="/preview" component={Liveboard} />
-        <Route path="/searchdirect" component={Search} />
-        <Route path="/emptysearch" component={EmptySearch} />
-        <Route path="/searchtour" component={FullApp} />
-        {/* <Route path="/freetrial" component={FreeTrial} /> */}
+        <Route path="/preview/liveboard" component={Liveboard} />
+        <Route path="/preview/search" component={FullApp} />
+        <Route path="/preview/freetrial" component={FreeTrial} />
       </Switch>
     </Router>
   );

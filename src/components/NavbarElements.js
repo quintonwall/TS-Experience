@@ -1,10 +1,13 @@
 import { FaBars } from "react-icons/fa";
 import { NavLink as Link } from "react-router-dom";
 import styled from "@emotion/styled";
+import App from "../App";
+
+
 
 export const Nav = styled.nav`
 
-  background: #31353f;
+  background: #333333;
   height: 38px;
   display: flex;
   align-items: left;
@@ -68,7 +71,7 @@ export const NavBtn = styled.nav`
   }
 `;
 
-export const NavBtnLink = styled(Link)`
+export const FreeTrialBtn = styled(Link)`
   border-radius: 4px;
   background-color: none;
   color: #ddd;
@@ -85,6 +88,28 @@ export const NavBtnLink = styled(Link)`
   &:hover {
     transition: all 0.2s ease-in-out;
     background-color: #585A5D;
+  }
+`;
+
+export const FreeTrialBtnBlue = styled(Link)`
+  border-radius: 14px;
+  background-color: #4E55FD;
+  color: #ffffff;
+  padding: 6px 15px;
+  font-family: "OptimoPlainRegular";
+  font-weight: 400;
+  font-size: 12px;
+  outline: none;
+  border-style: solid;
+  border-color: #4E55FD;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    background-color: #3E43CA;
+    border-style: solid;
+    border-color: #3E43CA;
   }
 `;
 
