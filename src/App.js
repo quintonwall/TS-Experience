@@ -23,12 +23,12 @@ import { Redirect } from "react-router";
 const GlobalStyles = css`
   @font-face {
     font-family: "BBRollerRegular";
-    src: url("./fonts/bbrollermonoprotx-regular.ttf") format("truetype");
+    src: url("/fonts/bbrollermonoprotx-regular.ttf") format("truetype");
   }
 
   @font-face {
     font-family: "OptimoPlainRegular";
-    src: url("./fonts/plain-regular.ttf") format("truetype");
+    src: url("/fonts/plain-regular.ttf") format("truetype");
   }
 
   * {
@@ -58,7 +58,7 @@ function App() {
       <Global styles={GlobalStyles} />
       <Navbar />
       <Switch>
-        <Redirect from="/" to="preview/liveboard" />
+        <Redirect from="/" to="/preview/liveboard" />
         <Route path="/" exact component={Liveboard} />
         <Route path="/preview/liveboard" component={Liveboard} />
         <Route path="/preview/search" component={FullApp} />
