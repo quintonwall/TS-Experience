@@ -5,7 +5,7 @@ const Home = () => {
   return (
     
     <div className="Body">
-      ThoughtSpot Product Tour
+      ThoughtSpot Product Tour by Quinton Wall.
     </div>
   );
 };

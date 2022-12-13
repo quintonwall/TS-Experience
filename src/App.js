@@ -1,10 +1,12 @@
 import React from "react";
 import "./App.css";
 import { Global, css } from "@emotion/react";
-import {Helmet} from "react-helmet";
+import {Helmet, HelmetProvider} from "react-helmet-async";
 import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./config";
+import packageJson from "../package.json";
+import Cookies from 'universal-cookie';
 
 import Home from "./pages/Home";
 import Liveboard from "./pages/Liveboard";
@@ -41,25 +43,28 @@ const GlobalStyles = css`
 
 function App() {
 
+  const cookies = new Cookies();
+  cookies.set("ept", "ept-cookie", {secure: true, sameSite: 'none'});
+
   
   const isInit = useInitThoughtSpot(gbl_thoughtSpotHost);
   if (!isInit) {
-    return <>Loading...</>;
+    return <>Loading EPT version {packageJson.version}</>;
   }
   return (
     
 
     <Router>
-      <Helmet>
-                <title>ThoughtSpot Product Tour</title>
-                <meta name="description" content="{gbl_meta.description}" />
-                <meta name="keywords" content="{gbl_meta.meta.name.keywords}" />
-    </Helmet>
+      <HelmetProvider>
+        <Helmet>
+                  <title>ThoughtSpot Product Tour</title>
+                  <meta name="description" content="{gbl_meta.description}" />
+                  <meta name="keywords" content="{gbl_meta.meta.name.keywords}" />
+      </Helmet>
+    </HelmetProvider>
       <Global styles={GlobalStyles} />
       <Navbar />
       <Switch>
-        <Redirect from="/" to="preview/liveboard" />
-
         <Route path="/" exact component={Home} />
         <Route path="/preview/liveboard" component={Liveboard} />
         <Route path="/preview/search" component={FullApp} />
