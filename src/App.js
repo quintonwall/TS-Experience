@@ -25,7 +25,7 @@ import { Redirect } from "react-router";
 const GlobalStyles = css`
   @font-face {
     font-family: "BBRollerRegular";
-    src: url("./fonts/BBRollerMonoProTX-Regular.ttf") format("truetype");
+    src: url("./fonts/bbrollermonoprotx-regular.ttf") format("truetype");
   }
 
   @font-face {
