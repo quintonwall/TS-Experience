@@ -7,6 +7,7 @@ import {BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./config";
 import packageJson from "../package.json";
 import Cookies from 'universal-cookie';
+import { BrowserView, MobileView, isBrowser, isMobile, isSafari, isIE } from 'react-device-detect';
 
 import Home from "./pages/Home";
 import Liveboard from "./pages/Liveboard";
@@ -48,6 +49,26 @@ function App() {
 
   
   const isInit = useInitThoughtSpot(gbl_thoughtSpotHost);
+  if (isSafari || isIE) { 
+    return <div className="Body"> 
+      You are currently using an unsupported browser. To view the ThoughtSpot Product Tour, 
+      please note the following support across browsers:<br/>
+      &nbsp;  <br/>
+      <b>Supported desktop browsers</b><br/>
+      Chrome, Edge, Firefox, and Opera<br/>
+      &nbsp; <br/>
+      <b>Supported mobile browsers</b><br/>
+      Android webview, Chrome for Android, Firefox for Android, Opera for Android, and Samsung Internet<br/>
+      &nbsp; <br/>
+      <b>NOT supported desktop browsers</b><br/>
+      Internet Explorer, Safari<br/>
+      &nbsp; <br/>
+      <b>NOT supported mobile browser</b><br/>
+      Safari on iOS<br/>
+    </div>
+    
+  }
+   
   if (!isInit) {
     return <>Loading EPT version {packageJson.version}</>;
   }
@@ -65,7 +86,7 @@ function App() {
       <Global styles={GlobalStyles} />
       <Navbar />
       <Routes>
-        <Route path="/" exact element={< Home />} />
+        <Route path="/preview/"  element={<Liveboard />} />
         <Route path="/preview/home"  element={< Home />} />
         <Route path="/preview/liveboard" element={<Liveboard />} />
         <Route path="/preview/search" element={<FullApp />} />

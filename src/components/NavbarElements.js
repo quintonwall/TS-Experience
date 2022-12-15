@@ -3,7 +3,13 @@ import { NavLink as Link } from "react-router-dom";
 import styled from "@emotion/styled";
 import App from "../App";
 
+export const MobileDiv = styled.nav`
 
+color: #ddd;
+font-family: "BBRollerRegular";
+font-weight: 400;
+font-size: 12px;
+`;
 
 export const Nav = styled.nav`
 
@@ -48,6 +54,7 @@ export const Bars = styled(FaBars)`
     cursor: pointer;
   }
 `;
+
 
 export const NavMenu = styled.div`
   display: flex;

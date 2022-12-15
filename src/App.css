@@ -5,11 +5,16 @@
 
 .Body {
   margin-top: 40;
-  font-family: "OptimoPlain";
+  font-family: "OptimoPlainRegular";
   font-weight: 400;
   font-size: 24;
 }
 
+ul.no-bullets {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
 
 
 
