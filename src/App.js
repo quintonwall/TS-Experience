@@ -7,7 +7,7 @@ import {BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./config";
 import packageJson from "../package.json";
 import Cookies from 'universal-cookie';
-import { BrowserView, MobileView, isBrowser, isMobile, isSafari } from 'react-device-detect';
+import { BrowserView, MobileView, isBrowser, isMobile, isSafari, isIE } from 'react-device-detect';
 
 import Home from "./pages/Home";
 import Liveboard from "./pages/Liveboard";
