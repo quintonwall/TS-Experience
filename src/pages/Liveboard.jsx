@@ -28,7 +28,7 @@ const Liveboard = () => {
 
   return (
     <div >
-      <LiveboardEmbed
+      <LiveboardEmbed 
             ref={embedRef}
             frameParams={{
               height: 1200

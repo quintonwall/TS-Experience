@@ -3,7 +3,7 @@ import "./App.css";
 import { Global, css } from "@emotion/react";
 import {Helmet, HelmetProvider} from "react-helmet-async";
 import Navbar from "./components/Navbar";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./config";
 import packageJson from "../package.json";
 import Cookies from 'universal-cookie';
@@ -25,12 +25,12 @@ import { Redirect } from "react-router";
 const GlobalStyles = css`
   @font-face {
     font-family: "BBRollerRegular";
-    src: url("/fonts/bbrollermonoprotx-regular.ttf") format("truetype");
+    src: url("/preview/fonts/bbrollermonoprotx-regular.ttf") format("truetype");
   }
 
   @font-face {
     font-family: "OptimoPlainRegular";
-    src: url("/fonts/plain-regular.ttf") format("truetype");
+    src: url("/preview/fonts/plain-regular.ttf") format("truetype");
   }
 
   * {
@@ -64,12 +64,13 @@ function App() {
     </HelmetProvider>
       <Global styles={GlobalStyles} />
       <Navbar />
-      <Switch>
-        <Route path="/" exact component={Liveboard} />
-        <Route path="/preview/liveboard" component={Liveboard} />
-        <Route path="/preview/search" component={FullApp} />
-        <Route path="/preview/freetrial" component={FreeTrial} />
-      </Switch>
+      <Routes>
+        <Route path="/" exact element={< Home />} />
+        <Route path="/preview/home"  element={< Home />} />
+        <Route path="/preview/liveboard" element={<Liveboard />} />
+        <Route path="/preview/search" element={<FullApp />} />
+        <Route path="/preview/freetrial" element={<FreeTrial />} />
+      </Routes>
     </Router>
   );
 }
