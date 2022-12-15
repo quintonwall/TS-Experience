@@ -86,8 +86,7 @@ function App() {
       <Global styles={GlobalStyles} />
       <Navbar />
       <Routes>
-        <Route path="/preview" exact element={< Home />} />
-        <Route path="/preview/home"  element={< Home />} />
+         <Route path="/preview/home"  element={< Home />} />
         <Route path="/preview/liveboard" element={<Liveboard />} />
         <Route path="/preview/search" element={<FullApp />} />
         <Route path="/preview/freetrial" element={<FreeTrial />} />
