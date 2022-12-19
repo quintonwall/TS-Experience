@@ -3,7 +3,7 @@ import { LiveboardEmbed, useEmbedRef } from '@thoughtspot/visual-embed-sdk/lib/s
 import { EmbedEvent, Action, HostEvent } from '@thoughtspot/visual-embed-sdk';
 import "./liveboard.css";
 import '../config'
-import { gbl_disabledActionSet, gbl_disabledMessage } from "../config";
+import { gbl_disabledActionSet, gbl_disabledMessage, gbl_visibleActionSet } from "../config";
 
 
 
@@ -38,6 +38,7 @@ const Liveboard = () => {
             onLoad={onLoad}
             disabledActions={gbl_disabledActionSet}
             disabledActionReason={gbl_disabledMessage}
+            visibleActions={gbl_visibleActionSet}
         />
     </div>
   );

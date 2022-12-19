@@ -16,5 +16,40 @@ ul.no-bullets {
   padding: 0;
 }
 
+a.nav {
+  color: #ddd;
+  font-family: "BBRollerRegular";
+  font-weight: 400;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+  cursor: pointer;
+  &.active {
+    color: #ddd;
+    border-bottom: 2px solid #ddd;
+  }
+}
+a.bluebutton {
+  border-radius: 14px;
+  background-color: #4E55FD;
+  color: #ffffff;
+  padding: 6px 15px;
+  font-family: "OptimoPlainRegular";
+  font-weight: 400;
+  font-size: 12px;
+  outline: none;
+  border-style: solid;
+  border-color: #4E55FD;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+}
+
+
+
+
 
 
