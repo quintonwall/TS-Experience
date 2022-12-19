@@ -50,9 +50,7 @@ export const gbl_disabledActionSet =  [
         Action.UpdateTML 
       ];
       export const gbl_visibleActionSet =  [
-        Action.ShowUnderlyingData,
-        
-
+        Action.ShowUnderlyingData
       ];
 
       export const gbl_meta = {
