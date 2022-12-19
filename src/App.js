@@ -89,10 +89,11 @@ function App() {
          <Route path="/preview/home"  element={< Home />} />
         <Route path="/preview/liveboard" element={<Liveboard />} />
         <Route path="/preview/search" element={<FullApp />} />
-        <Route path="/preview/freetrial" element={<FreeTrial />} />
+       
       </Routes>
     </Router>
   );
 }
 
 export default App;
+
