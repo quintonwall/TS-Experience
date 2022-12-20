@@ -50,7 +50,12 @@ export const gbl_disabledActionSet =  [
         Action.UpdateTML 
       ];
       export const gbl_visibleActionSet =  [
-        Action.ShowUnderlyingData
+        Action.ShowUnderlyingData,
+        Action.AddFilter,
+        Action.Present,
+        Action.CopyLink,
+        Action.LiveboardInfo,
+        Action.MakeACopy
       ];
 
       export const gbl_meta = {

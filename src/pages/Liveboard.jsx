@@ -38,6 +38,7 @@ const Liveboard = () => {
             onLoad={onLoad}
             disabledActions={gbl_disabledActionSet}
             disabledActionReason={gbl_disabledMessage}
+            visibleActions={gbl_visibleActionSet}
         />
     </div>
   );
