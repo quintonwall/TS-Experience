@@ -44,11 +44,19 @@ export const gbl_disabledActionSet =  [
         "sync-to-sheets",
         "sync-to-other-apps",
         "manage-pipeline",
+        "manage-alerts",
         Action.Subscription,
         Action.ToggleSize,
         Action.UpdateTML 
       ];
-
+      export const gbl_visibleActionSet =  [
+        Action.ShowUnderlyingData,
+        Action.AddFilter,
+        Action.Present,
+        Action.CopyLink,
+        Action.LiveboardInfo,
+        Action.MakeACopy
+      ];
 
       export const gbl_meta = {
         title: "ThoughtSpot Product Tour",

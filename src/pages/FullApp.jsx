@@ -3,7 +3,7 @@ import { AppEmbed, useEmbedRef } from '@thoughtspot/visual-embed-sdk/lib/src/rea
 import { EmbedEvent, Action, HostEvent } from '@thoughtspot/visual-embed-sdk';
 import "./liveboard.css";
 import '../config'
-import { gbl_disabledActionSet, gbl_disabledMessage } from "../config";
+import { gbl_disabledActionSet, gbl_disabledMessage, gbl_visibleActionSet } from "../config";
 
 
 
@@ -36,6 +36,9 @@ const FullApp = () => {
             fullHeight="true"
             pageId="Page.Home"
             path="saved-answer/ef625725-b6fa-4ce4-9522-d942499a1690"
+            disabledActions={gbl_disabledActionSet}
+            disabledActionReason={gbl_disabledMessage}
+            visibleActions={gbl_visibleActionSet}
         />
     </div>
   );

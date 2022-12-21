@@ -10,6 +10,7 @@ import {
   ThoughtSpotLogo
 } from "./NavbarElements";
 import { useNavigate } from "react-router-dom";
+import "../App.css";
 
 
 const Navbar = () => {
@@ -32,14 +33,12 @@ const Navbar = () => {
           <NavLink to="/preview/search" >
             SEARCH
           </NavLink>
-          <NavLink to={{pathname: "https://codesandbox.io/p/github/thoughtspot/TS-Experience/main"}} target="_blank" >
-            DEVELOP
-          </NavLink>
+          <a class="nav" href="https://codesandbox.io/p/github/thoughtspot/TS-Experience/main">DEVELOP</a>
         </NavMenu>
 
         <NavBtn style={{marginRight:+ '20'}}>
-          <FreeTrialBtnBlue  to={{pathname: "https://www.thoughtspot.com/trial", search: "?tsref=producttour"}} target="_blank">Free Trial</FreeTrialBtnBlue>
-        </NavBtn>
+          <a class="bluebutton" href="https://www.thoughtspot.com/trial?tsref=producttour">Free Trial</a>
+         </NavBtn>
       </Nav>
     </>
   );

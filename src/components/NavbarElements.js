@@ -120,6 +120,8 @@ export const FreeTrialBtnBlue = styled(Link)`
   }
 `;
 
+
+
 export const ThoughtSpotLogo = styled.div`
 padding: 15px 80px;
 text-align: left;
