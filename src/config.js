@@ -55,7 +55,8 @@ export const gbl_disabledActionSet =  [
         Action.Present,
         Action.CopyLink,
         Action.LiveboardInfo,
-        Action.MakeACopy
+        Action.MakeACopy,
+        Action.DrillDown
       ];
 
       export const gbl_meta = {
