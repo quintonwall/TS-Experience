@@ -33,11 +33,11 @@ const Navbar = () => {
           <NavLink to="/preview/search" >
             SEARCH
           </NavLink>
-          <a class="nav" href="https://codesandbox.io/p/github/thoughtspot/TS-Experience/main" target="_blank">See the Code</a>
+          <a class="nav" href="https://codesandbox.io/p/github/thoughtspot/TS-Experience/main" target="_blank">SEE THE CODE</a>
         </NavMenu>
 
         <NavBtn style={{marginRight:+ '20'}}>
-          <a class="bluebutton" href="https://www.thoughtspot.com/trial?tsref=producttour"  target="_blank">Free Trial</a>
+          <a class="bluebutton" href="https://www.thoughtspot.com/trial?tsref=producttour"  target="_blank">FREE TRIAL</a>
          </NavBtn>
       </Nav>
     </>
