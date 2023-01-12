@@ -33,7 +33,7 @@ const Navbar = () => {
           <NavLink to="/preview/search" >
             SEARCH
           </NavLink>
-          <a class="nav" href="https://codesandbox.io/p/github/thoughtspot/TS-Experience/main" target="_blank">SEE THE CODE</a>
+          <a class="nav" href="https://codesandbox.io/p/github/thoughtspot/TS-Experience/main">DEVELOP</a>
         </NavMenu>
 
         <NavBtn style={{marginRight:+ '20'}}>
