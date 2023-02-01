@@ -53,20 +53,29 @@ function App() {
     return <div className="unsupported_body"> 
       <img src="https://www.thoughtspot.com/images/logo-black-with-r.svg" class="header_logo " width="158" height="32" />
 
-      <p>You are currently using an unsupported browser. To view the ThoughtSpot Product Tour, 
-      please note the following support across browsers:</p>
+      <p>Hi there!</p>
+      <p>Unfortunately, you are currently using an unsupported browser :(</p>
+      <p>To view the ThoughtSpot Product Tour, please use the following supported web browsers on your mobile and desktop devices :)</p>
 
-      <p><b>Supported desktop browsers</b><br/>
-      Chrome, Edge, Firefox, and Opera</p>
+      <p style={{fontSize: '14px'}}>
+        - Chrome<br />
+        - Edge<br />
+        - Firefox<br />
+        - Opera<br />
+        - Android webview<br />
+        - Chrome for Android<br />
+        - Firefox for Android<br />
+        - Opera for Android<br />
+        - Samsung Internet<br />
+      </p>
+  
+      <p>At this time the following browsers are NOT supported for desktop and mobile:</p>
 
-      <p><b>Supported mobile browsers</b><br/>
-      Android webview, Chrome for Android, Firefox for Android, Opera for Android, and Samsung Internet</p>
-
-      <p><b>NOT supported desktop browsers</b><br/>
-      Internet Explorer, Safari</p>
-
-      <p><b>NOT supported mobile browser</b><br/>
-      Safari on iOS</p>
+      <p style={{fontSize: '14px'}}>
+        - Internet Explorer<br />
+        - Safari<br />
+        - Safari on iOS<br />
+      </p>
     </div>
   }
    
