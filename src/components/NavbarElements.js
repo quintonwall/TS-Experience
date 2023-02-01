@@ -33,7 +33,7 @@ export const NavLink = styled(Link)`
   align-items: center;
   text-decoration: none;
   padding: 0 1rem;
-  height: 100%;
+  height: 40px;
   cursor: pointer;
   &.active {
     color: #ddd;
@@ -125,7 +125,7 @@ export const FreeTrialBtnBlue = styled(Link)`
 export const ThoughtSpotLogo = styled.div`
 padding: 15px 80px;
 text-align: left;
-background-image: url("/preview/T-hires.png");
+background-image: url("/product-tour/T-hires.png");
 background-size: 24px 24px;
 background-repeat: no-repeat;
 background-position: center;

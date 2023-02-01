@@ -26,12 +26,12 @@ import { Redirect } from "react-router";
 const GlobalStyles = css`
   @font-face {
     font-family: "BBRollerRegular";
-    src: url("/preview/fonts/bbrollermonoprotx-regular.ttf") format("truetype");
+    src: url("/product-tour/fonts/bbrollermonoprotx-regular.ttf") format("truetype");
   }
 
   @font-face {
     font-family: "OptimoPlainRegular";
-    src: url("/preview/fonts/plain-regular.ttf") format("truetype");
+    src: url("/product-tour/fonts/plain-regular.ttf") format("truetype");
   }
 
   * {
@@ -50,26 +50,24 @@ function App() {
   
   const isInit = useInitThoughtSpot(gbl_thoughtSpotHost);
   if (isSafari || isIE) { 
-    return <div className="Body"> 
-     Unfortunately, you are currently using an unsupported browser <br/>
-      &nbsp;  <br/>
-      <b>To view the ThoughtSpot Product Tour, please use the following supported web browsers on your mobile and desktop devices:</b>
-      <br/>- Chrome<br/>
-      <br/>- Edge<br/>
-      <br/>- Firefox<br/>
-      <br/>- Opera<br/>
-      <br/>- Android webview<br/>
-      <br/>- Chrome for Android<br/>
-      <br/>- Firefox for Android<br/>
-      <br/>- Samsung Internet<br/>
-      &nbsp; <br/>
-      <b>At this time the following browsers are NOT supported for desktop and mobile:</b><br/>
-      <br/>- Internet Explorerbr/>
-      <br/>- Safari<br/>
-      <br/>- Safari on iOS<br/>
+    return <div className="unsupported_body"> 
+      <img src="https://www.thoughtspot.com/images/logo-black-with-r.svg" class="header_logo " width="158" height="32" />
+
+      <p>You are currently using an unsupported browser. To view the ThoughtSpot Product Tour, 
+      please note the following support across browsers:</p>
+
+      <p><b>Supported desktop browsers</b><br/>
+      Chrome, Edge, Firefox, and Opera</p>
+
+      <p><b>Supported mobile browsers</b><br/>
+      Android webview, Chrome for Android, Firefox for Android, Opera for Android, and Samsung Internet</p>
+
+      <p><b>NOT supported desktop browsers</b><br/>
+      Internet Explorer, Safari</p>
+
+      <p><b>NOT supported mobile browser</b><br/>
+      Safari on iOS</p>
     </div>
-    
-    
   }
    
   if (!isInit) {
@@ -89,10 +87,10 @@ function App() {
       <Global styles={GlobalStyles} />
       <Navbar />
       <Routes>
-        <Route path="/preview/"  element={<Liveboard />} />
-        <Route path="/preview/home"  element={< Home />} />
-        <Route path="/preview/liveboard" element={<Liveboard />} />
-        <Route path="/preview/search" element={<FullApp />} />
+        <Route path="/product-tour/"  element={<Liveboard />} />
+        <Route path="/product-tour/home"  element={< Home />} />
+        <Route path="/product-tour/liveboard" element={<Liveboard />} />
+        <Route path="/product-tour/search" element={<FullApp />} />
        
       </Routes>
     </Router>

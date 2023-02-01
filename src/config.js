@@ -62,11 +62,11 @@ export const gbl_disabledActionSet =  [
       export const gbl_meta = {
         title: "ThoughtSpot Product Tour",
         description: "Experience the power of live analytics with a interactive demo of ThoughtSpot.",
-        canonical: "https://thoughtspot.com/preview",
+        canonical: "https://thoughtspot.com/product-tour",
         meta: {
             charset: "utf-8",
             name: {
-                keywords: "thoughtspot,quinton,embedded analytics, demo, live analytics, preview"
+                keywords: "thoughtspot, embedded analytics, demo, live analytics, product-tour"
             }
         }
       }

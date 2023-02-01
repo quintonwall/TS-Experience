@@ -56,21 +56,23 @@ function App() {
   
  
   if (isSafari || isIE) { 
-    return <div className="Body"> 
-      You are currently using an unsupported browser. To view the ThoughtSpot Product Tour, 
-      please note the following support across browsers:<br/>
-      &nbsp;  <br/>
-      <b>Supported desktop browsers</b><br/>
-      Chrome, Edge, Firefox, and Opera<br/>
-      &nbsp; <br/>
-      <b>Supported mobile browsers</b><br/>
-      Android webview, Chrome for Android, Firefox for Android, Opera for Android, and Samsung Internet<br/>
-      &nbsp; <br/>
-      <b>NOT supported desktop browsers</b><br/>
-      Internet Explorer, Safari<br/>
-      &nbsp; <br/>
-      <b>NOT supported mobile browser</b><br/>
-      Safari on iOS<br/>
+    return <div className="unsupported_body"> 
+      <img src="https://www.thoughtspot.com/images/logo-black-with-r.svg" class="header_logo " width="158" height="32" />
+
+      <p>You are currently using an unsupported browser. To view the ThoughtSpot Product Tour, 
+      please note the following support across browsers:</p>
+
+      <p><b>Supported desktop browsers</b><br/>
+      Chrome, Edge, Firefox, and Opera</p>
+
+      <p><b>Supported mobile browsers</b><br/>
+      Android webview, Chrome for Android, Firefox for Android, Opera for Android, and Samsung Internet</p>
+
+      <p><b>NOT supported desktop browsers</b><br/>
+      Internet Explorer, Safari</p>
+
+      <p><b>NOT supported mobile browser</b><br/>
+      Safari on iOS</p>
     </div>
     
   }
@@ -90,9 +92,9 @@ function App() {
       <Global styles={GlobalStyles} />
       <Navbar />
       <Routes>
-         <Route path="/preview/home"  element={< Home />} />
-        <Route path="/preview/liveboard" element={<Liveboard />} />
-        <Route path="/preview/search" element={<FullApp />} />
+         <Route path="/product-tour/home"  element={< Home />} />
+        <Route path="/product-tour/liveboard" element={<Liveboard />} />
+        <Route path="/product-tour/search" element={<FullApp />} />
        
       </Routes>
     </Router>

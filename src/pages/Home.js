@@ -9,10 +9,10 @@ const Home = () => {
     
     <MobileDiv>
       <center>
-        <ul class="no-bullets">
+        <ul className="no-bullets">
           <li>&nbsp;</li>
-          <li><a href="/preview/liveboard" >LIVEBOARD</a></li>
-          <li><a href="/preview/search" >SEARCH</a></li>
+          <li><a href="/product-tour/liveboard" >LIVEBOARD</a></li>
+          <li><a href="/product-tour/search" >SEARCH</a></li>
           <li><a href="https://codesandbox.io/p/github/thoughtspot/TS-Experience/main" target="_blank">DEVELOPER</a></li>
           <li><a href="https://www.thoughtspot.com/trial?tsref=producttour" >FREE TRIAL</a></li>
         </ul>

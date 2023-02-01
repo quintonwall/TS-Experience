@@ -3,11 +3,19 @@
   text-align: center;
 }
 
-.Body {
-  margin-top: 40;
-  font-family: "OptimoPlainRegular";
+.unsupported_body {
+  margin-top: 20px;
+  font-family: "OptimoPlainRegular", Arial, Helvetica, sans-serif;
   font-weight: 400;
-  font-size: 24;
+  font-size: 16px;
+  line-height: 24px;
+  max-width: 800px;
+  margin: 100px auto;
+  padding: 20px;
+}
+
+.unsupported_body b {
+  font-size: 18px;
 }
 
 ul.no-bullets {
@@ -50,9 +58,15 @@ a.bluebutton {
 }
 
 .column {
-  max-width: 1500px;
   width: 100%;
   margin: 0 auto;
+  padding: 0 105px;
+}
+
+@media only screen and (max-width: 1926px) {
+  .column {
+    padding: 0 25px;
+  }
 }
 
 
