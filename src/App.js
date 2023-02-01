@@ -16,7 +16,7 @@ import EmptySearch from "./pages/EmptySearch";
 import FullApp from "./pages/FullApp";
 import FreeTrial from "./pages/FreeTrial";
 import { FaAccessibleIcon } from "react-icons/fa";
-import { gbl_metatitle, gbl_thoughtSpotHost } from "./config";
+import { gbl_meta, gbl_thoughtSpotHost } from "./config";
 import { useInitThoughtSpot } from "./use-init-thoughtspot";
 import { useEffect } from "react/cjs/react.production.min";
 import { Redirect } from "react-router";
@@ -80,8 +80,8 @@ function App() {
       <HelmetProvider>
         <Helmet>
                   <title>ThoughtSpot Product Tour</title>
-                  <meta name="description" content="{gbl_meta.description}" />
-                  <meta name="keywords" content="{gbl_meta.meta.name.keywords}" />
+                  <meta name="description" content={gbl_meta.description} />
+                  <meta name="keywords" content={gbl_meta.meta.name.keywords} />
       </Helmet>
     </HelmetProvider>
       <Global styles={GlobalStyles} />
