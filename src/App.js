@@ -51,26 +51,29 @@ function App() {
   const isInit = useInitThoughtSpot(gbl_thoughtSpotHost);
   if (isSafari || isIE) { 
     return <div className="Body"> 
-      You are currently using an unsupported browser. To view the ThoughtSpot Product Tour, 
-      please note the following support across browsers:<br/>
+     Unfortunately, you are currently using an unsupported browser <br/>
       &nbsp;  <br/>
-      <b>Supported desktop browsers</b><br/>
-      Chrome, Edge, Firefox, and Opera<br/>
+      <b>To view the ThoughtSpot Product Tour, please use the following supported web browsers on your mobile and desktop devices:</b>
+      <br/>- Chrome<br/>
+      <br/>- Edge<br/>
+      <br/>- Firefox<br/>
+      <br/>- Opera<br/>
+      <br/>- Android webview<br/>
+      <br/>- Chrome for Android<br/>
+      <br/>- Firefox for Android<br/>
+      <br/>- Samsung Internet<br/>
       &nbsp; <br/>
-      <b>Supported mobile browsers</b><br/>
-      Android webview, Chrome for Android, Firefox for Android, Opera for Android, and Samsung Internet<br/>
-      &nbsp; <br/>
-      <b>NOT supported desktop browsers</b><br/>
-      Internet Explorer, Safari<br/>
-      &nbsp; <br/>
-      <b>NOT supported mobile browser</b><br/>
-      Safari on iOS<br/>
+      <b>At this time the following browsers are NOT supported for desktop and mobile:</b><br/>
+      <br/>- Internet Explorerbr/>
+      <br/>- Safari<br/>
+      <br/>- Safari on iOS<br/>
     </div>
+    
     
   }
    
   if (!isInit) {
-    return <>Loading EPT version {packageJson.version}</>;
+    return <></>;
   }
   return (
     
