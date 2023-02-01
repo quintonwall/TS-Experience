@@ -21,6 +21,7 @@ a.nav {
   font-family: "BBRollerRegular";
   font-weight: 400;
   font-size: 12px;
+  line-height: 12px;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -34,22 +35,25 @@ a.nav {
 }
 a.bluebutton {
   border-radius: 14px;
-  background-color: #4E55FD;
+  background-color: rgb(39, 112, 239);
   color: #ffffff;
-  padding: 6px 15px;
+  padding: 4px 15px;
   font-family: "OptimoPlainRegular";
   font-weight: 400;
   font-size: 12px;
   outline: none;
   border-style: solid;
-  border-color: #4E55FD;
+  border-color: rgb(39, 112, 239);
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
 }
 
-
-
+.column {
+  max-width: 1500px;
+  width: 100%;
+  margin: 0 auto;
+}
 
 
 
