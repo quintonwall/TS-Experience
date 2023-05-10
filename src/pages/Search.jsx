@@ -4,33 +4,21 @@ import { EmbedEvent, Action, HostEvent } from '@thoughtspot/visual-embed-sdk';
 import "../config";
 import { gbl_disabledActionSet, gbl_disabledMessage, gbl_visibleActionSet } from "../config";
 
-// Instantiate SearchEmbed class
-const Search = new SearchEmbed("#your-own-div", {
-    frameParams: {},
-    /*param-start-collapseDataSources*//*param-end-collapseDataSources*/
-    /*param-start-hideDataSources*//*param-end-hideDataSources*/
-    /*param-start-hideResults*/
-    hideResults: true,
-/*param-end-hideResults*/
-    /*param-start-enableSearchAssist*//*param-end-enableSearchAssist*/
-    /*param-start-modifyActions*//*param-end-modifyActions*/
-    /*param-start-disabledActions*//*param-end-disabledActions*/
-    /*param-start-dataSources*//*param-end-dataSources*/
-    /*param-start-searchOptions*//*param-end-searchOptions*/
-    /*param-start-answerId*//*param-end-answerId*/
-});
+const Search = {
+  frameParams: {},
+  /*param-start-collapseDataSources*//*param-end-collapseDataSources*/
+  /*param-start-hideDataSources*//*param-end-hideDataSources*/
+  /*param-start-hideResults*/
+  hideResults: true,
+  /*param-end-hideResults*/
+  /*param-start-enableSearchAssist*//*param-end-enableSearchAssist*/
+  /*param-start-modifyActions*//*param-end-modifyActions*/
+  /*param-start-disabledActions*//*param-end-disabledActions*/
+  /*param-start-dataSources*//*param-end-dataSources*/
+  /*param-start-searchOptions*//*param-end-searchOptions*/
+  /*param-start-answerId*//*param-end-answerId*/
+};
 
-embed
-  // Register event handlers
-  .on(EmbedEvent.Init, showLoader)
-  .on(EmbedEvent.Load, hideLoader)
-  .on(EmbedEvent.AuthExpire, showAuthExpired)
-  /*param-start-customActionHandle*//*param-end-customActionHandle*/
-  .on("answerPageLoading", payload =>
-    console.log("message received from embedded view" + JSON.stringify(payload))
-  )
-  // Render the embedded search and pass in the data source id
-  .render();
 
 // Function to show/hide
 function setDisplayStyle(el, style) {
@@ -50,6 +38,9 @@ function hideLoader() {
 function showAuthExpired() {
   setDisplayStyle("authExpiredBanner", "flex");
 }
+
+export default Search;
+
 
 
 export default Search;
