@@ -4,25 +4,52 @@ import { EmbedEvent, Action, HostEvent } from '@thoughtspot/visual-embed-sdk';
 import "../config";
 import { gbl_disabledActionSet, gbl_disabledMessage, gbl_visibleActionSet } from "../config";
 
-const Search = () => {
-  const embedRef = useEmbedRef({
-    frameParams: {width: '100%', height: '100%'},
-    hideDataSources: true,
-    answerId: "ef625725-b6fa-4ce4-9522-d942499a1690",
-    });
+// Instantiate SearchEmbed class
+const Search = new SearchEmbed("#your-own-div", {
+    frameParams: {},
+    /*param-start-collapseDataSources*//*param-end-collapseDataSources*/
+    /*param-start-hideDataSources*//*param-end-hideDataSources*/
+    /*param-start-hideResults*/
+    hideResults: true,
+/*param-end-hideResults*/
+    /*param-start-enableSearchAssist*//*param-end-enableSearchAssist*/
+    /*param-start-modifyActions*//*param-end-modifyActions*/
+    /*param-start-disabledActions*//*param-end-disabledActions*/
+    /*param-start-dataSources*//*param-end-dataSources*/
+    /*param-start-searchOptions*//*param-end-searchOptions*/
+    /*param-start-answerId*//*param-end-answerId*/
+});
 
-  return (
-    <div>
-      <SearchEmbed
-        ref={embedRef}
-        frameParams={{ hideDataSources: "true", width: '100%', height: '100%', }}
-        answerId={"ef625725-b6fa-4ce4-9522-d942499a1690"}
-        disabledActions={gbl_disabledActionSet}
-        disabledActionReason={gbl_disabledMessage}
-        visibleActions={gbl_visibleActionSet}
-      />
-    </div>
-  );
-};
+embed
+  // Register event handlers
+  .on(EmbedEvent.Init, showLoader)
+  .on(EmbedEvent.Load, hideLoader)
+  .on(EmbedEvent.AuthExpire, showAuthExpired)
+  /*param-start-customActionHandle*//*param-end-customActionHandle*/
+  .on("answerPageLoading", payload =>
+    console.log("message received from embedded view" + JSON.stringify(payload))
+  )
+  // Render the embedded search and pass in the data source id
+  .render();
+
+// Function to show/hide
+function setDisplayStyle(el, style) {
+  if(document.getElementById(el)) {
+    document.getElementById(el).style.display = style;
+  }
+}
+
+// Functions to show and hide a loader while iframe loads
+function showLoader() {
+  setDisplayStyle("loader", "block");
+}
+function hideLoader() {
+  setDisplayStyle("loader", "none");
+}
+
+function showAuthExpired() {
+  setDisplayStyle("authExpiredBanner", "flex");
+}
+
 
 export default Search;
