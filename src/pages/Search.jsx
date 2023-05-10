@@ -5,7 +5,7 @@ import "../config";
 import { gbl_disabledActionSet, gbl_disabledMessage, gbl_visibleActionSet } from "../config";
 
 const Search = () => {
-  const embedRef = useEmbedRef("#your-own-div", {
+  const embedRef = useEmbedRef({
     frameParams: {width: '100%', height: '100%'},
     hideDataSources: true,
     answerId: "ef625725-b6fa-4ce4-9522-d942499a1690",
@@ -15,6 +15,7 @@ const Search = () => {
     <div>
       <SearchEmbed
         ref={embedRef}
+        frameParams={{ hideDataSources: "true", width: '100%', height: '100%', }}
         answerId={"ef625725-b6fa-4ce4-9522-d942499a1690"}
         disabledActions={gbl_disabledActionSet}
         disabledActionReason={gbl_disabledMessage}
