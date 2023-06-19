@@ -2,23 +2,16 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="theme-color" content="#000000">
-  <!--
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="theme-color" content="#000000">
+	<!--
       manifest.json provides metadata used when your web app is added to the
       homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
     -->
-  <link rel="manifest" href="%PUBLIC_URL%/asset-manifest.json">
-  <link sizes="16x16" type="image/png" rel="icon"
-    href="https://media.thoughtspot.com/35707/1609892687-favicon-32x32.png?auto=format&amp;h=16&amp;w=16" />
-  <link sizes="32x32" type="image/png" rel="icon"
-    href="https://media.thoughtspot.com/35707/1609892687-favicon-32x32.png?auto=format&amp;h=32&amp;w=32" />
-  <link sizes="96x96" type="image/png" rel="icon"
-    href="https://media.thoughtspot.com/35707/1609892687-favicon-32x32.png?auto=format&amp;h=96&amp;w=96" />
-  <link sizes="192x192" type="image/png" rel="icon"
-    href="https://media.thoughtspot.com/35707/1609892687-favicon-32x32.png?auto=format&amp;h=192&amp;w=192" />
-  <!--
+	<link rel="manifest" href="%PUBLIC_URL%/asset-manifest.json">
+  <link sizes="16x16" type="image/png" rel="icon" href="https://media.thoughtspot.com/35707/1609892687-favicon-32x32.png?auto=format&amp;h=16&amp;w=16" /><link sizes="32x32" type="image/png" rel="icon" href="https://media.thoughtspot.com/35707/1609892687-favicon-32x32.png?auto=format&amp;h=32&amp;w=32" /><link sizes="96x96" type="image/png" rel="icon" href="https://media.thoughtspot.com/35707/1609892687-favicon-32x32.png?auto=format&amp;h=96&amp;w=96" /><link sizes="192x192" type="image/png" rel="icon" href="https://media.thoughtspot.com/35707/1609892687-favicon-32x32.png?auto=format&amp;h=192&amp;w=192" />
+	<!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
       Only files inside the `public` folder can be referenced from the HTML.
@@ -27,60 +20,15 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-  <title>React App</title>
-  <!-- Google Tag Manager -->
-  <script>(function (w, d, s, l, i) {
-      w[l] = w[l] || []; w[l].push({
-        'gtm.start':
-          new Date().getTime(), event: 'gtm.js'
-      }); var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-NQJWB5');</script><!-- End Google Tag Manager -->
-
-  <script>
-    if (typeof window.mixpanel == 'undefined') {
-      (function (e, c) {
-        if (!c.__SV) {
-          var l, h; window.mixpanel = c; c._i = []; c.init = function (q, r, f) {
-            function t(d, a) { var g = a.split("."); 2 == g.length && (d = d[g[0]], a = g[1]); d[a] = function () { d.push([a].concat(Array.prototype.slice.call(arguments, 0))) } } var b = c; "undefined" !== typeof f ? b = c[f] = [] : f = "mixpanel"; b.people = b.people || []; b.toString = function (d) { var a = "mixpanel"; "mixpanel" !== f && (a += "." + f); d || (a += " (stub)"); return a }; b.people.toString = function () { return b.toString(1) + ".people (stub)" }; l = "disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
-            for (h = 0; h < l.length; h++)t(b, l[h]); var n = "set set_once union unset remove delete".split(" "); b.get_group = function () { function d(p) { a[p] = function () { call2_args = arguments; call2 = [p].concat(Array.prototype.slice.call(call2_args, 0)); b.push([g, call2]) } } for (var a = {}, g = ["get_group"].concat(Array.prototype.slice.call(arguments, 0)), m = 0; m < n.length; m++)d(n[m]); return a }; c._i.push([q, r, f])
-          }; c.__SV = 1.2; var k = e.createElement("script"); k.type = "text/javascript"; k.async = !0; k.src = "undefined" !== typeof MIXPANEL_CUSTOM_LIB_URL ?
-            MIXPANEL_CUSTOM_LIB_URL : "file:" === e.location.protocol && "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//) ? "https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js" : "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js"; e = e.getElementsByTagName("script")[0]; e.parentNode.insertBefore(k, e)
-        }
-      })(document, window.mixpanel || []); var productionHosts = ["thoughtspot.com", "go.thoughtspot.com"], devToken = "f14b3a7f47b202a3ca8e03397df2ff48", prodToken = "bbd66bca010bd4bb2cb3bed77fa6db02";
-      var initialized = false;
-      for (var i = 0; i < productionHosts.length; i++) {
-        var host = productionHosts[i];
-        if (!initialized) {
-          if (window.location.hostname.toLowerCase().search(host) > -1) {
-            mixpanel.init(prodToken, { batch_requests: !0 });
-            initialized = true;
-          }
-        }
-      }
-      if (!initialized) {
-        mixpanel.init(devToken, { batch_requests: !0 });
-      }
-    }
-  </script>
-
-  <script>
-    (function(){var a=window.mutiny=window.mutiny||{};if(!window.mutiny.client){a.client={_queue:{}};var b=["identify","trackConversion"];var c=[].concat(b,["defaultOptOut","optOut","optIn"]);var d=function factory(c){return function(){for(var d=arguments.length,e=new Array(d),f=0;f<d;f++){e[f]=arguments[f]}a.client._queue[c]=a.client._queue[c]||[];if(b.includes(c)){return new Promise(function(b,d){a.client._queue[c].push({args:e,resolve:b,reject:d});setTimeout(d,500)})}else{a.client._queue[c].push({args:e})}}};c.forEach(function(b){a.client[b]=d(b)})}})();
-  </script>
-  <script data-cfasync="false" src="https://client-registry.mutinycdn.com/personalize/client/33fef0917e75a633.js"></script>
+	<title>React App</title>
 </head>
 
 <body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NQJWB5" height="0" width="0"
-      style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-  <noscript>
-    You need to enable JavaScript to run this app.
-  </noscript>
-  <div id="root"></div>
-  <!--
+	<noscript>
+		You need to enable JavaScript to run this app.
+	</noscript>
+	<div id="root"></div>
+	<!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
 
