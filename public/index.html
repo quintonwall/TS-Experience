@@ -54,21 +54,26 @@
         var host = productionHosts[i];
         if (!initialized) {
           if (window.location.hostname.toLowerCase().search(host) > -1) {
-            mixpanel.init(prodToken, { batch_requests: !0 });
+            mixpanel.init(prodToken, { batch_requests: !0, api_host: 'https://mp.proxy.thoughtspot.cloud' });
             initialized = true;
           }
         }
       }
       if (!initialized) {
-        mixpanel.init(devToken, { batch_requests: !0 });
+        mixpanel.init(devToken, { batch_requests: !0, api_host: 'https://mp.proxy.thoughtspot.cloud' });
       }
     }
   </script>
 
   <script>
-    (function(){var a=window.mutiny=window.mutiny||{};if(!window.mutiny.client){a.client={_queue:{}};var b=["identify","trackConversion"];var c=[].concat(b,["defaultOptOut","optOut","optIn"]);var d=function factory(c){return function(){for(var d=arguments.length,e=new Array(d),f=0;f<d;f++){e[f]=arguments[f]}a.client._queue[c]=a.client._queue[c]||[];if(b.includes(c)){return new Promise(function(b,d){a.client._queue[c].push({args:e,resolve:b,reject:d});setTimeout(d,500)})}else{a.client._queue[c].push({args:e})}}};c.forEach(function(b){a.client[b]=d(b)})}})();
+    (function() {
+      var a="_mv";var b="mutiny.user.token";var c=window.location.search.replace("?","").split("&");var d=c.find(function(b){return b.startsWith(a)});var e=d&&d.split("=")[1];if(e){var f=new Date;f.setTime(f.getTime()+3*52*7*24*60*60*1000);var g=window.location.hostname;document.cookie="".concat(b,"=").concat(e,"; expires=").concat(f.toUTCString(),"; path=/; domain=.").concat(g.substring(g.lastIndexOf(".",g.lastIndexOf(".")-1)+1))}window.mutinyTrackConversion=function(a){var c="55d6ee346d491baa";var d=("; "+document.cookie).split("; "+b+"=");var f=e||(d.length===2?d.pop().split(";").shift():null);var g="https://api.mutinyhq.io/v2/i/conversions/t?token=".concat(c);var h=new XMLHttpRequest;h.open("POST",g,false);h.send(JSON.stringify({visitor_token:f,form_data:{name:a||"pixel"}}))};
+      window.mutinyTrackConversion('signup-complete');
+    })();
   </script>
   <script data-cfasync="false" src="https://client-registry.mutinycdn.com/personalize/client/33fef0917e75a633.js"></script>
+
+  <script src="https://scripts.thoughtspot.com/cookieyes.js"></script>
 </head>
 
 <body>
