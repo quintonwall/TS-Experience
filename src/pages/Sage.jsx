@@ -62,10 +62,10 @@ const Sage = () => {
 	const authStatus = init({
 		thoughtSpotHost: TS_HOST,
 		authType: AuthType.Basic,
-		// username: 'webmarketing',
-		// password: 'PMM$.user',
-		username: 'tsadmin',
-		password: '123Cloud!',
+		username: 'webmarketing',
+		password: 'PMM$.user',
+		// username: 'tsadmin',
+		// password: '123Cloud!',
 
 		// hostConfig: {
 		// 	hostUserGuid: getUserGuid(),
