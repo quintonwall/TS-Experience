@@ -34,7 +34,7 @@ const Liveboard = () => {
 					height: 1200
 				}}
 				fullHeight={fullHeight}
-				liveboardId="b173faa2-e861-4540-a232-853f7aeb2c37"
+				liveboardId="0bfc1cc3-75a5-487d-82c3-45cc704437cb"
 				onLoad={onLoad}
 				disabledActions={gbl_disabledActionSet}
 				disabledActionReason={gbl_disabledMessage}
