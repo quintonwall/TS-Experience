@@ -20,7 +20,7 @@ import FullApp from "./pages/FullApp";
 import FreeTrial from "./pages/FreeTrial";
 import { FaAccessibleIcon } from "react-icons/fa";
 import { gbl_meta, gbl_thoughtSpotHost } from "./config";
-import { useInitThoughtSpot } from "./use-init-thoughtspot";
+// import { useInitThoughtSpot } from "./use-init-thoughtspot";
 import { useEffect } from "react/cjs/react.production.min";
 import { Redirect } from "react-router";
 

@@ -33,6 +33,10 @@ const Navbar = () => {
               <NavLink to="/product-tour/search" >
                 SEARCH
               </NavLink>
+              <a className="nav" href="https://www.thoughtspot.com/trial?tsref=producttour">SPOTIQ</a>
+              <a className="nav" href="https://www.thoughtspot.com/trial?tsref=producttour">MONITOR</a>
+              <a className="nav" href="https://www.thoughtspot.com/trial?tsref=producttour">DATA</a>
+              <a className="nav" href="https://www.thoughtspot.com/trial?tsref=producttour">ADMIN</a>
               <a className="nav" href="https://codesandbox.io/p/github/thoughtspot/TS-Experience/main">SEE THE CODE </a>
           </NavMenu>
 
