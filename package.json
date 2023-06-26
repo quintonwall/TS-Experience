@@ -29,7 +29,7 @@
   },
   "scripts": {
     "start": "PORT=8000  react-scripts --openssl-legacy-provider start",
-    "build_for_s3": "PORT=8000 PUBLIC_URL=https://s3.us-west-1.amazonaws.com/tsalivepreview.thoughtspot.com/staging/ react-scripts --openssl-legacy-provider build",
+    "build_for_s3": "PORT=8000 PUBLIC_URL=https://s3.us-west-1.amazonaws.com/tsalivepreview.thoughtspot.com/ react-scripts --openssl-legacy-provider build",
     "build": "PORT=8000 react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
