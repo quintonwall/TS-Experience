@@ -7,6 +7,8 @@ import {
   AuthType
 } from "@thoughtspot/visual-embed-sdk";
 
+import { gbl_thoughtSpotHost } from "./../config";
+import { useInitThoughtSpot } from "./../use-init-thoughtspot";
 // import {
 // 	getClusterId,
 // 	getClusterName,
@@ -59,21 +61,21 @@ const Sage = () => {
 
 	// https://try-everywhere-internal.thoughtspotstaging.cloud
 
-	const authStatus = init({
-		thoughtSpotHost: TS_HOST,
-		authType: AuthType.Basic,
-		username: 'webmarketing',
-		password: 'PMM$.user',
-		// username: 'tsadmin',
-		// password: '123Cloud!',
+	// const authStatus = init({
+	// 	thoughtSpotHost: TS_HOST,
+	// 	authType: AuthType.Basic,
+	// 	username: 'webmarketing',
+	// 	password: 'PMM$.user',
+	// 	// username: 'tsadmin',
+	// 	// password: '123Cloud!',
 
-		// hostConfig: {
-		// 	hostUserGuid: getUserGuid(),
-		// 	hostClusterId: getClusterId(),
-		// 	hostClusterName: getClusterName(),
-		// },
-		autoLogin: true
-	});
+	// 	// hostConfig: {
+	// 	// 	hostUserGuid: getUserGuid(),
+	// 	// 	hostClusterId: getClusterId(),
+	// 	// 	hostClusterName: getClusterName(),
+	// 	// },
+	// 	autoLogin: true
+	// });
 	
 	// authStatus.on("SUCCESS", () => {
 	// 	notification.info({
@@ -98,6 +100,9 @@ const Sage = () => {
 		
 	// });
 	React.useEffect(() => {
+		useInitThoughtSpot(gbl_thoughtSpotHost);
+
+
 		if (embedRef !== null) {
 			embedRef.current.innerHTML = "";
 		}

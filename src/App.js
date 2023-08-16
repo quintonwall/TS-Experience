@@ -70,8 +70,6 @@ function App() {
 	}
 
 	return (
-
-
 		<Router>
 			<HelmetProvider>
 				<Helmet>
@@ -83,10 +81,10 @@ function App() {
 			<Global styles={GlobalStyles} />
 			<Navbar />
 			<Routes>
-				<Route path="/product-tour/" element={<Liveboard />} />
-				<Route path="/product-tour/home" element={< Home />} />
-				<Route path="/product-tour/liveboard" element={<Liveboard />} />
-				<Route path="/product-tour/search" element={<Sage />} />
+				<Route path={(process.env.PUBLIC_URL.indexOf('-test') > -1 ? '/staging' : '') + "/product-tour/"} element={<Liveboard />} />
+				<Route path={(process.env.PUBLIC_URL.indexOf('-test') > -1 ? '/staging' : '') + "/product-tour/home"} element={< Home />} />
+				<Route path={(process.env.PUBLIC_URL.indexOf('-test') > -1 ? '/staging' : '') + "/product-tour/liveboard"} element={<Liveboard />} />
+				<Route path={(process.env.PUBLIC_URL.indexOf('-test') > -1 ? '/staging' : '') + "/product-tour/search"} element={<Sage />} />
 			</Routes>
 		</Router>
 	);
